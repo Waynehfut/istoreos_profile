@@ -66,6 +66,12 @@
         </a>  
         {% endif %}
 
+        {% if site.orcid %}
+        <a style="margin: 0 5px 0 0" href="{{ site.orcid }}">
+          <i class="fab fa-orcid" style="font-size:1.2rem"></i>
+        </a>  
+        {% endif %}
+
         {% if site.cv_link %}
         <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
           <i class="ai ai-cv" style="font-size:1.3rem;"></i>
@@ -100,12 +106,12 @@
       <br>
 
       {% if site.enable_footnote %}
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+       <a href="{{ site.footer_url }}" style="color: black"><small>{{ site.footer_text }}</small></a>
       {% endif %}
 
       </section>
       <footer>
-        
+       
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
